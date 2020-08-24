@@ -22,11 +22,11 @@ export class TodoItem extends Component{
 
         return(
             <div style={this.getStyle()}>
-                <h1>
+                <p>
                     <input type='checkbox' onChange={this.props.taskComplete.bind(this, id)}/>
                     {title}
                     <button onClick={this.props.deleteTodo.bind(this, id)} style={btnStlye}> X </button>
-                </h1>
+                </p>
             </div>
         )
     }
