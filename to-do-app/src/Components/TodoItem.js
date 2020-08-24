@@ -12,6 +12,8 @@ export class TodoItem extends Component{
         }
     }
 
+  
+
 
     render(){
 
@@ -23,6 +25,7 @@ export class TodoItem extends Component{
                 <h1>
                     <input type='checkbox' onChange={this.props.taskComplete.bind(this, id)}/>
                     {title}
+                    <button onClick={this.props.deleteTodo.bind(this, id)} style={btnStlye}> X </button>
                 </h1>
             </div>
         )
@@ -31,6 +34,16 @@ export class TodoItem extends Component{
 
 TodoItem.propTypes = {
     todo: PropTypes.object.isRequired
+}
+
+const btnStlye =  {
+    background: '#ff0000',
+    color: 'white',
+    border: 'none',
+    padding: '5px 9px',
+    borderRadius: '50%',
+    cursor: 'pointer',
+    float: 'right'
 }
 
 export default TodoItem
